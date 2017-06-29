@@ -1,5 +1,5 @@
 # Matching Engine
-Exchange simulator which support live/playback market data
+Exchange simulator which support live/replay market data
 
 ```Java
 OrderBook orderBook = new OrderBook("0001.HK");
