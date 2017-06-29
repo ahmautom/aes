@@ -6,7 +6,7 @@ OrderBook orderBook = new OrderBook("0001.HK");
 orderBook.addMessageListener(new MessageListener() {
     @Override
     public void onMessage(AbstractMessage message) {
-        // Do something with ER Message
+        System.out.println("Received " + message.getClass().getSimpleName());
     }
 });
 Depth snapshot = new Depth(
