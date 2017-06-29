@@ -11,6 +11,7 @@ public class TestClient implements MessageListener {
 
     @Override
     public void onMessage(AbstractMessage message) {
+        System.out.println("Received " + message.getClass().getSimpleName());
         this.messages.add(message);
     }
 
