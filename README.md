@@ -40,6 +40,10 @@ NewOrderSingle nos = (new NewOrderSingle.Builder())
 orderBook.onNewOrderSingle(nos);
 ```
 
+## Getting start
+Java 8 is required in order to compile the project.
+JUnit 5 is required if you would like to run some unit tests.
+
 ## How it works
 ```
  NOS/Cancel  +--------------+   Snapshot  +--------------+
@@ -53,10 +57,6 @@ orderBook.onNewOrderSingle(nos);
 - Either a new order single or an update in market data will trigger a matching process in order book.
 - Market liquidity (as indicated by market data) will be wrapped by a normal order and added to asks/bids queue accordingly. So that it simplifies the matching process.
 - When there is an update in market data, Order Book will work out the change in market liquidity. If there is increased in liquidity, they will be added as new order to the queue. Otherwise, existing order representing market liquidity will be filled with that amount. If the liquidity have already taken by other orders then there will be no fill again.
-
-## Dependency
-- Java8
-- JUnit5
 
 ## Todos
 - Consider lot size
